@@ -57,10 +57,13 @@ $(document).ready(function(){
 
 
 
-
-  $(".btn").on("click", function() {
-    //set tvshow variable to this data attribute 
-    var tvshow = $(this).attr("data-search");
+//on-click for submit button on form
+  $("#addShow").on("click", function(event) {
+    event.preventDefault();
+    //set tvshow variable to user input
+    var tvshow = $("#tvshowInput").val().trim();
+    //push user input to TVshows array
+    tvshowsArray.push(tvshow);
     
     
 
